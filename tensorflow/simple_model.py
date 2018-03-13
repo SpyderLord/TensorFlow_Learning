@@ -18,3 +18,19 @@ def simple_model(X,y):
     h1_flat=tf.reshape(h1,[-1,5408])
     y_out=tf.matmul(h1_flat,W1)+b1
     return y_out
+
+#
+
+# run a simple model
+# with tf.Session() as sess:
+#     with tf.device("/gpu:0"): #"/cpu:0" or "/gpu:0"
+#         sess.run(tf.global_variables_initializer())
+#         print('Training')
+#         run_model(sess,y_out,mean_loss,X_train,y_train,1,64,100,train_step,True )
+#         print('Validation')
+#         run_model(sess,y_out,mean_losls s,X_val,y_val,1,64)
+#         sess.close()
+#         print(tf.get_default_graph())
+#         print('!')
+
+#run a complex model
