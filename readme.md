@@ -3,13 +3,13 @@ To train a neural network:
 - Gradient check your implementation with a small batch of data and be aware of the pitfalls
 - As a sanity check,make sure that your initial loss is reasonable,and that yo can achieve 100% training accuracy on a small portion of the data.
 - During training,monitor(跟踪) the loss,the training/validation accuracy and if you're feeling fancier, the magnitude of the updates in relation to parameter value.(如果愿意的话，还可以跟踪更新的参数量相对于总参数的比例，然后如果是对于卷积神经网络，可以将第一层可视化。)
-- The two recommended updates to use are SGD+Nesterov Momentum o‘r Adam(both for optimization)
+- The two recommended updates to use are SGD+Nesterov Momentum or Adam(both for optimization)
 - Decay your learning rate over the period of the training.For /instance,halve the learning rate after a fixed number of epochs,or whenever the validation accuracy tops off.
 - Search for good hyperparamters with random search.
 - Form model ensembles for extra performance.
 
 ## Something about TensorFlow
-- 如何使用变量和操作组成更大的集合，怎么运行这个集合。这就是计算图谱Graph和Session的作用了一个TensorFlow的运算，被表示为一个数据流的图。一幅图中包含一些操作（operation）对象，这些对象是计算节点。一个Tensor对象，则是表示在不同的操作间的数据节点。一旦我们开始我们的任务，就会有一个默认的图已经建立好了。添加一个操作到默认的图里面，只要简单的调用一个定义了新操作的函数就可以了。
+- 如何使用变量和操作组成更大的集合，怎么运行这个集合。这就是计算图谱Graph和Session的作用了一个TensorFlow的运算，被表示为一个数据流的图。一幅图中包含一些操作（operation）对象，这些对象是计算节点。一个Tensor对象，则是表示在不同的操作间的数据节点。一旦我们开始我们的任务，就会有一个默认的图已经建立好了。添加一个操作(operation)到默认的图里面，只要简单的调用一个定义了新操作的函数就可以了。
 - 运行一个TensorFlow的操作（operation）的类，一个session包含了操作对象执行的环境。
 - 就属性而言，graph是投放到session中的图。
 - 重要的函数有：session.run（fetch,feed_dict=None,options=None,run_metadata=None）
