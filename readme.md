@@ -29,7 +29,7 @@ with myGraph.as_default():
 op是计算图中的节点，它能够接收tensor作为输入，并能够产生tensor作为输出。op的创建方式有两种，一种是调用了计算操作，比如说一些计算的函数tf.nn.conv2d()、tf.nn.max_pool()
 这些函数名就是节点op。另一种方法是调用Graph.create_op()方法往图里添加op。通常我们都是使用第一种方案。op在构建图的时候是不会执行的，只有在执行图的时候才会执行。
 - tensor（向量）
-tensor就是op计算的输入/输出结果。同样的，tensor在构建图的时候并不持有值，，而是在运行的时候才会持有数值。tensor作为op的输入/输出在graph中进行传递，从而使得tensorflow能够执行代表着大规模的计算图，这也正是tensorflow得名的原因（向量的流动）。常量和变量都是tensor。
+tensor就是op计算的输入/输出结果。同样的，tensor在构建图的时候并不持有值，而是在运行的时候才会持有数值。tensor作为op的输入/输出在graph中进行传递，从而使得tensorflow能够执行代表着大规模的计算图，这也正是tensorflow得名的原因（向量的流动）。常量和变量都是tensor。
 - session（会话）
 在前三歩中我们完成了构建一个计算图表，现在我们需要执行这个计算图表。session就是执行计算图表的类。tensor的执行要通过sess.run(tensor)来执行。session对象封装了op执行和tensor传递的环境。session对象开启之后会持有资源，所以在使用完之后需要将它关掉。
 ### tensorflow中的图变量：
@@ -51,4 +51,4 @@ tensor就是op计算的输入/输出结果。同样的，tensor在构建图的�
 - 如果是使用get_variable 进行变量定义的话，变量的名字是不能重复的，但是用variable进行定义的时候是可以的重复的，但是当我们打印出来他们的属性的时候会发现他们并不是完全一样的。
 
 ## 使用scope进行命名空间的划分：
-太多了不想打了：粘贴链接：http://blog.csdn.net/gg_18826075157/article/details/78368924
+太多了不想打了：粘贴链接：[http://blog.csdn.net/gg_18826075157/article/details/78368924]
