@@ -56,5 +56,5 @@ tensor就是op计算的输入/输出结果。同样的，tensor在构建图的�
 ## 在使用tensorflow时关于padding参数的一点说明
 - padding参数有两个可以选择的值，一个是VALID，另一个是SAME，下面就关于这两个参数进行简单的说明
 ### SAME参数下的pad方式
-- ![](1.jpg)
+- ![](1.png)
 
